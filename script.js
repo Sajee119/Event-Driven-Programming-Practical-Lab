@@ -51,3 +51,15 @@ let btn2 = document.createElement('button');
 btn2.innerText = "Observer 2";
 document.getElementById('buttonContainer').appendChild(btn2);
 addObserver(btn2);
+
+// step - 6
+// Prevent text selection
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+});
+
+// Prevent copying content
+document.addEventListener('copy', function(e) {
+    e.preventDefault();
+    alert("Copying is disabled on this page.");
+});
