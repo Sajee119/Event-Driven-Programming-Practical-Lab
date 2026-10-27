@@ -14,3 +14,12 @@ document.getElementById('buttonContainer').addEventListener('click', function(e)
         alert('You clicked ' + e.target.innerText);
     }
 });
+
+document.getElementById('submitBtn').addEventListener('click', function() {
+    let input = document.getElementById('inputField').value;
+    if (input === "") {
+        document.getElementById('output').innerText = "Error: Input cannot be empty!";
+    } else {
+        document.getElementById('output').innerText = "You entered: " + input;
+    }
+});
